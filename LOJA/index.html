@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja Online Rosa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header>
+  <div class="topo">
+    <div class="menu-hamburguer" onclick="toggleMenu()">&#9776;</div>
+    
+    <h1 class="titulo">Loja </h1>
+    
+    <div class="topo-direita">
+      <div class="busca">
+        <input type="text" id="campo-busca" placeholder="Buscar produtos..." oninput="filtrarProdutos()" />
+        <span class="icone-lupa">🔍</span>
+      </div>
+
+      <div class="icone-carrinho" onclick="scrollToCarrinho()">
+        🛒 <span id="contador-carrinho">0</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="menu-categorias" id="menu">
+    <a href="#">Início</a>
+    <a href="#">Itens</a>
+    <a href="#">Ajuda</a>
+  </nav>
+</header>
+
+
+
+
+  <div class="container" id="produtos">
+    <!-- Produtos serão inseridos aqui -->
+  </div>
+
+  <div class="carrinho">
+  <h2>Carrinho de Compras</h2>
+  <ul id="lista-carrinho"></ul>
+  <p><strong>Total: R$ <span id="total">0.00</span></strong></p>
+  <button onclick="finalizarCompra()">Finalizar Compra</button>
+</div>
+
+
+  <footer>
+    <h3>Formas de Pagamento</h3>
+    <div class="pagamentos">
+      <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+      <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard">
+      <img src="https://img.icons8.com/color/48/000000/pix.png" alt="Pix">
+      <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal">
+      <p>&copy; 2025 Loja Rosa</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
